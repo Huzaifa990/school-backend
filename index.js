@@ -475,6 +475,10 @@ app.get("/allShuffleStudentsTeachers", async (req, res)=>{
     }
   })
 
+  app.get("/admins", async (req, res)=>{
+    const admins = await Signup.find({ accountType: "admin"})
+    res.status(200).send(admins);
+  })
 
 app.listen(port, () => {
   console.log("API is running on port: " + port);
