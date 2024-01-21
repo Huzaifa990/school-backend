@@ -476,7 +476,7 @@ app.get("/allShuffleStudentsTeachers", async (req, res)=>{
   })
 
   app.get("/admins", async (req, res)=>{
-    const admins = await Signup.find({ accountType: "admin"})
+    const admins = await Signup.find({ accountType: "admin", adminStatus: "approved"})
     res.status(200).send(admins);
   })
 
