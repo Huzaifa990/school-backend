@@ -10,6 +10,10 @@ var authSchema = new mongoose.Schema({
     type: String,
     default: "pending"
   },
+  teacherStatus: {
+    type: Boolean,
+    default: true
+  },
   lastName: {
     type: String,
     required: true,
